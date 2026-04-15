@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rose Beauty Parlour | Best Salon in Gulshan-e-Iqbal, Karachi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body class="text-gray-800">
+
+    <!-- Sticky Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 px-6 md:px-12 flex justify-between items-center">
+        <a href="#" class="text-2xl md:text-3xl font-serif font-bold text-pink-700">
+            Rose <span class="text-gray-900 font-light">Beauty</span>
+        </a>
+        
+        <div class="hidden md:flex space-x-8 font-medium uppercase text-xs tracking-widest">
+            <a href="#home" class="hover:text-pink-700 transition">Home</a>
+            <a href="#services" class="hover:text-pink-700 transition">Services</a>
+            <a href="#offers" class="hover:text-pink-700 transition">Offers</a>
+            <a href="#gallery" class="hover:text-pink-700 transition">Gallery</a>
+            <a href="#contact" class="hover:text-pink-700 transition text-pink-700 font-bold border-b-2 border-pink-700">Book Now</a>
+        </div>
+
+        <div class="md:hidden">
+            <button id="mobile-menu-btn" class="text-2xl"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-[60] flex flex-col items-center justify-center space-y-8 text-2xl font-serif hidden">
+        <button id="close-menu" class="absolute top-8 right-8 text-3xl">&times;</button>
+        <a href="#home" onclick="toggleMenu()">Home</a>
+        <a href="#services" onclick="toggleMenu()">Services</a>
+        <a href="#offers" onclick="toggleMenu()">Offers</a>
+        <a href="#gallery" onclick="toggleMenu()">Gallery</a>
+        <a href="#contact" onclick="toggleMenu()" class="text-pink-700">Book Appointment</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Decor -->
+        <div class="absolute inset-0 bg-pink-50 opacity-50"></div>
+        <div class="absolute -top-24 -left-24 w-96 h-96 bg-pink-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
+        <div class="absolute bottom-0 right-0 w-80 h-80 bg-rose-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+
+        <div class="container mx-auto px-6 text-center z-10">
+            <span class="uppercase tracking-[0.3em] text-sm mb-4 block text-pink-600 animate-fade-in">Experience Luxury in Gulshan-e-Iqbal</span>
+            <h1 class="text-5xl md:text-8xl font-serif mb-6 leading-tight">Unveil Your <br><span class="italic text-pink-700">Natural Glow</span></h1>
+            <p class="max-w-xl mx-auto text-gray-600 text-lg mb-10 font-light">Affordable luxury meets expert care. Step into a world of elegance and redefine your beauty with Rose Beauty Parlour.</p>
+            
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-gradient-rose text-white px-10 py-4 rounded-full font-semibold shadow-lg hover:shadow-pink-200 transition-all transform hover:-translate-y-1">
+                    Book Appointment
+                </a>
+                <a href="tel:02134977970" class="border-2 border-pink-700 text-pink-700 px-10 py-4 rounded-full font-semibold hover:bg-pink-50 transition-all">
+                    <i class="fas fa-phone-alt mr-2"></i> Call Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights -->
+    <section class="py-12 bg-pink-50 border-y border-pink-100">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <i class="fas fa-magic text-2xl text-pink-600 mb-2"></i>
+                    <h4 class="font-bold">Expert Artists</h4>
+                    <p class="text-xs text-gray-500 uppercase tracking-tighter">Certified Professionals</p>
+                </div>
+                <div>
+                    <i class="fas fa-sparkles text-2xl text-pink-600 mb-2"></i>
+                    <h4 class="font-bold">Hygienic Care</h4>
+                    <p class="text-xs text-gray-500 uppercase tracking-tighter">Sanitized Equipment</p>
+                </div>
+                <div>
+                    <i class="fas fa-gem text-2xl text-pink-600 mb-2"></i>
+                    <h4 class="font-bold">Premium Products</h4>
+                    <p class="text-xs text-gray-500 uppercase tracking-tighter">International Brands</p>
+                </div>
+                <div>
+                    <i class="fas fa-heart text-2xl text-pink-600 mb-2"></i>
+                    <h4 class="font-bold">Affordable Luxury</h4>
+                    <p class="text-xs text-gray-500 uppercase tracking-tighter">Best Prices in KDA</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-serif mb-4">Our Signature Services</h2>
+                <div class="w-24 h-1 bg-pink-700 mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Hair -->
+                <div class="service-card group bg-white p-8 rounded-2xl border border-gray-100 hover:border-pink-200 shadow-sm hover:shadow-xl transition-all">
+                    <div class="service-icon w-16 h-16 bg-pink-50 text-pink-700 rounded-2xl flex items-center justify-center text-2xl mb-6 transition-transform">
+                        <i class="fas fa-scissors"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif mb-4">Hair Styling</h3>
+                    <ul class="text-gray-600 space-y-3 mb-6">
+                        <li class="flex justify-between border-b border-pink-50 pb-1"><span>Signature Cut</span> <span class="text-pink-700 font-bold">Rs. 1,500</span></li>
+                        <li class="flex justify-between border-b border-pink-50 pb-1"><span>Blow Dry & Style</span> <span class="text-pink-700 font-bold">Rs. 800</span></li>
+                        <li class="flex justify-between border-b border-pink-50 pb-1"><span>Hair Coloring</span> <span class="text-pink-700 font-bold">Rs. 4,500+</span></li>
+                        <li class="flex justify-between border-b border-pink-50 pb-1"><span>Protein Treatment</span> <span class="text-pink-700 font-bold">Rs. 2,500</span></li>
+                    </ul>
+                </div>
+
+                <!-- Skincare -->
+                <div class="service-card group bg-pink-50 p-8 rounded-2xl border border-pink-100 shadow-sm hover:shadow-xl transition-all">
+                    <div class="service-icon w-16 h-16 bg-pink-700 text-white rounded-2xl flex items-center justify-center text-2xl mb-6 transition-transform">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif mb-4">Facials & Skin</h3>
+                    <ul class="text-gray-600 space-y-3 mb-6">
+                        <li class="flex justify-between border-b border-white pb-1"><span>Hydra Facial</span> <span class="text-pink-700 font-bold">Rs. 5,000</span></li>
+                        <li class="flex justify-between border-b border-white pb-1"><span>Whitening Glow</span> <span class="text-pink-700 font-bold">Rs. 3,500</span></li>
+                        <li class="flex justify-between border-b border-white pb-1"><span>Herbal Organic</span> <span class="text-pink-700 font-bold">Rs. 2,200</span></li>
+                        <li class="flex justify-between border-b border-white pb-1"><span>Deep Cleansing</span> <span class="text-pink-700 font-bold">Rs. 1,500</span></li>
+                    </ul>
+                </div>
+
+                <!-- Makeup -->
+                <div class="service-card group bg-white p-8 rounded-2xl border border-gray-100 hover:border-pink-200 shadow-sm hover:shadow-xl transition-all">
+                    <div class="service-icon w-16 h-16 bg-pink-50 text-pink-700 rounded-2xl flex items-center justify-center text-2xl mb-6 transition-transform">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif mb-4">Makeup Artistry</h3>
+                    <ul class="text-gray-600 space-y-3 mb-6">
+                        <li class="flex justify-between border-b border-pink-50 pb-1"><span>Party Makeup</span> <span class="text-pink-700 font-bold">Rs. 4,000</span></li>
+                        <li class="flex justify-between border-b border-pink-50 pb-1"><span>Bridal Package</span> <span class="text-pink-700 font-bold">Rs. 25,000+</span></li>
+                        <li class="flex justify-between border-b border-pink-50 pb-1"><span>Engagement Look</span> <span class="text-pink-700 font-bold">Rs. 12,000</span></li>
+                        <li class="flex justify-between border-b border-pink-50 pb-1"><span>Model Portfolio</span> <span class="text-pink-700 font-bold">Custom</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <p class="text-gray-500 italic mb-4">*Prices may vary based on hair length and product choice.</p>
+                <a href="#contact" class="inline-block border-b-2 border-pink-700 text-pink-700 font-bold tracking-widest uppercase text-sm pb-1 hover:text-pink-800 transition">View All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers -->
+    <section id="offers" class="py-20 bg-midnight text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-pink-900 rounded-full filter blur-3xl opacity-30 -mr-32 -mt-32"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <h2 class="text-4xl md:text-5xl font-serif mb-6">Summer Glow <br><span class="text-pink-500">Special Offer!</span></h2>
+                    <p class="text-gray-400 mb-8 text-lg">Get 20% OFF on all Bridal Bookings and 15% OFF on Hydra Facials this month. Limited slots available for the wedding season!</p>
+                    <div class="flex items-center space-x-4 mb-8">
+                        <div class="bg-pink-700 p-4 rounded-lg text-center min-w-[80px]">
+                            <span class="block text-2xl font-bold">20%</span>
+                            <span class="text-[10px] uppercase tracking-wider">Discount</span>
+                        </div>
+                        <div class="text-pink-200 font-medium">Use Code: <span class="text-white font-bold bg-pink-900 px-3 py-1 rounded">ROSE2024</span></div>
+                    </div>
+                    <a href="#contact" class="bg-white text-midnight px-8 py-3 rounded-full font-bold hover:bg-pink-50 transition-colors inline-block">Claim My Discount</a>
+                </div>
+                <div class="md:w-1/2 grid grid-cols-2 gap-4">
+                    <div class="rounded-2xl overflow-hidden aspect-[3/4] border-4 border-pink-900/50">
+                        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80&w=600" alt="Special Offer 1" class="w-full h-full object-cover">
+                    </div>
+                    <div class="rounded-2xl overflow-hidden aspect-[3/4] mt-8 border-4 border-pink-900/50">
+                        <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&fit=crop&q=80&w=600" alt="Special Offer 2" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transformations / Gallery -->
+    <section id="gallery" class="py-24 bg-pink-50">
+        <div class="container mx-auto px-6 text-center mb-12">
+            <h2 class="text-4xl font-serif mb-4">Our Transformations</h2>
+            <p class="text-gray-600">Real results from our beautiful clients at KDA Market.</p>
+        </div>
+        
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="group relative overflow-hidden rounded-xl aspect-square">
+                    <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-pink-700/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <span class="text-white font-bold">Bridal Glow</span>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl aspect-square">
+                    <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-pink-700/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <span class="text-white font-bold">Party Look</span>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl aspect-square">
+                    <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-pink-700/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <span class="text-white font-bold">Eye Art</span>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl aspect-square">
+                    <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-pink-700/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <span class="text-white font-bold">Hair Styling</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-24 bg-white overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/3">
+                    <h2 class="text-4xl font-serif mb-6">Voices of <br><span class="text-pink-700 italic">Confidence</span></h2>
+                    <div class="flex space-x-2 text-pink-500 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-500">Over 500+ satisfied clients in Gulshan-e-Iqbal.</p>
+                </div>
+                <div class="md:w-2/3 grid md:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-2xl border-l-4 border-pink-700 shadow-sm italic">
+                        <p class="mb-6 text-gray-600">"The best facial services in Gulshan. My skin felt so hydrated and glowing after the Hydra facial. Truly professional staff!"</p>
+                        <div class="font-bold">- Sarah Ahmed</div>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl border-l-4 border-pink-700 shadow-sm italic">
+                        <p class="mb-6 text-gray-600">"Highly recommend for bridal makeup. They understood exactly what I wanted for my Nikah. Worth every penny!"</p>
+                        <div class="font-bold">- Maria Khan</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Booking -->
+    <section id="contact" class="py-24 bg-pink-50">
+        <div class="container mx-auto px-6">
+            <div class="bg-white rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row">
+                <div class="md:w-1/2 p-10 md:p-16">
+                    <h2 class="text-4xl font-serif mb-8">Book Your Glow Up</h2>
+                    <form id="booking-form" class="space-y-6">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs uppercase tracking-widest text-gray-400 mb-2">Name</label>
+                                <input type="text" class="w-full bg-pink-50 border-none rounded-lg p-3 focus:ring-2 focus:ring-pink-700 outline-none" required>
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase tracking-widest text-gray-400 mb-2">Phone</label>
+                                <input type="tel" class="w-full bg-pink-50 border-none rounded-lg p-3 focus:ring-2 focus:ring-pink-700 outline-none" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs uppercase tracking-widest text-gray-400 mb-2">Service</label>
+                            <select class="w-full bg-pink-50 border-none rounded-lg p-3 focus:ring-2 focus:ring-pink-700 outline-none">
+                                <option>Makeup Service</option>
+                                <option>Facial/Skincare</option>
+                                <option>Hair Cut/Color</option>
+                                <option>Bridal Package</option>
+                                <option>Other Service</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs uppercase tracking-widest text-gray-400 mb-2">Preferred Date</label>
+                            <input type="date" class="w-full bg-pink-50 border-none rounded-lg p-3 focus:ring-2 focus:ring-pink-700 outline-none">
+                        </div>
+                        <button type="submit" class="w-full bg-gradient-rose text-white py-4 rounded-xl font-bold shadow-lg hover:shadow-pink-200 transition-all">Send Inquiry</button>
+                    </form>
+                    
+                    <div id="form-success" class="hidden mt-4 p-4 bg-green-100 text-green-700 rounded-lg text-center">
+                        Thank you! We'll contact you shortly for confirmation.
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 bg-midnight text-white p-10 md:p-16 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-serif mb-8 text-pink-500">Find Us</h3>
+                        <div class="space-y-6 mb-12">
+                            <div class="flex items-start space-x-4">
+                                <i class="fas fa-map-marker-alt text-pink-700 mt-1"></i>
+                                <p>A-573 Allama Shabbir Ahmed Usmani Rd,<br>Block 3, Gulshan-e-Iqbal,<br>Karachi, Pakistan</p>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <i class="fas fa-phone-alt text-pink-700"></i>
+                                <a href="tel:02134977970" class="hover:text-pink-500 transition">021-34977970</a>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <i class="fas fa-clock text-pink-700"></i>
+                                <p>Mon - Sun: 10:00 AM - 08:30 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="rounded-2xl overflow-hidden h-64 grayscale hover:grayscale-0 transition-all duration-700 shadow-xl border-2 border-pink-900">
+                        <!-- Embedded map placeholder - normally would use an iframe -->
+                        <div class="w-full h-full bg-gray-800 flex flex-col items-center justify-center text-center p-4">
+                             <i class="fas fa-map-marked-alt text-4xl mb-4 text-pink-700"></i>
+                             <p class="mb-4 text-sm font-light">KDA Market, Gulshan-e-Iqbal</p>
+                             <a href="https://maps.app.goo.gl/9qW8ezZ3pAXu67uU9" target="_blank" class="text-pink-500 font-bold hover:underline">Open in Google Maps</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-12 border-t border-gray-100">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-2xl font-serif font-bold text-pink-700 mb-6">Rose Beauty</h2>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="w-10 h-10 rounded-full bg-pink-50 text-pink-700 flex items-center justify-center hover:bg-pink-700 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full bg-pink-50 text-pink-700 flex items-center justify-center hover:bg-pink-700 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full bg-pink-50 text-pink-700 flex items-center justify-center hover:bg-pink-700 hover:text-white transition"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <p class="text-gray-400 text-sm">© 2024 Rose Beauty Parlour - KDA Market. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/922134977970" target="_blank" class="fixed bottom-8 right-8 z-[100] bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-2xl floating-wa hover:scale-110 transition-transform">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="/index.js">
+    
+    </script>
+</body>
+</html>
